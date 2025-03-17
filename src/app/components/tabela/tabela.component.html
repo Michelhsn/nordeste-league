@@ -1,0 +1,36 @@
+<div class="container mx-auto mt-10 p-5">
+  <h1 class="text-3xl font-bold text-center mb-5">Nordeste League - Série A 2025</h1>
+
+  <div class="overflow-x-auto shadow-lg rounded-lg">
+    <table class="min-w-full bg-white border border-gray-300">
+      <thead class="bg-blue-600 text-white">
+        <tr>
+          <th class="px-4 py-2">#</th>
+          <th class="px-4 py-2 text-left">Time</th>
+          <th class="px-4 py-2">PTS</th>
+          <th class="px-4 py-2">J</th>
+          <th class="px-4 py-2">V</th>
+          <th class="px-4 py-2">E</th>
+          <th class="px-4 py-2">D</th>
+          <th class="px-4 py-2">GP</th>
+          <th class="px-4 py-2">GC</th>
+          <th class="px-4 py-2">SG</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let time of times" class="text-center border-b hover:bg-gray-100">
+          <td class="px-4 py-2 font-bold">{{ time.pos }}</td>
+          <td class="px-4 py-2 text-left">{{ time.nome }}</td>
+          <td class="px-4 py-2 font-bold">{{ time.pts }}</td>
+          <td class="px-4 py-2">{{ time.jogos }}</td>
+          <td class="px-4 py-2">{{ time.vitorias }}</td>
+          <td class="px-4 py-2">{{ time.empates }}</td>
+          <td class="px-4 py-2">{{ time.derrotas }}</td>
+          <td class="px-4 py-2">{{ time.golsPro }}</td>
+          <td class="px-4 py-2">{{ time.golsContra }}</td>
+          <td class="px-4 py-2">{{ time.saldo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
