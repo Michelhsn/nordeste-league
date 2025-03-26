@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tabela',
+  standalone: true, // necessário se você não estiver usando NgModule
+  imports: [CommonModule], // adicione esta linha
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.css']
 })

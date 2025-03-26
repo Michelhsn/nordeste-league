@@ -1,34 +1,49 @@
-<div class="container mx-auto mt-10 p-5">
-  <h1 class="text-3xl font-bold text-center mb-5">Nordeste League - Série A 2025</h1>
+<div class="container mx-auto p-8 font-sans bg-gray-900 text-gray-200 min-h-screen w-full min-w-full">
+  <h1 class="text-4xl font-extrabold text-center text-indigo-400 mb-6">⚽ Nordeste League - Série A 2025</h1>
 
-  <div class="overflow-x-auto shadow-lg rounded-lg">
-    <table class="min-w-full bg-white border border-gray-300">
-      <thead class="bg-blue-600 text-white">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-gradient-to-r from-indigo-600 to-purple-700 shadow-lg rounded-xl p-5">
+      <h2 class="text-xl font-semibold">🥇 Artilheiro da Competição</h2>
+      <p class="text-2xl font-bold mt-2">Pedro Silva (Fortaleza) - 12 gols</p>
+    </div>
+    <div class="bg-gradient-to-r from-purple-600 to-pink-700 shadow-lg rounded-xl p-5">
+      <h2 class="text-xl font-semibold">🛡️ Melhor Defesa</h2>
+      <p class="text-2xl font-bold mt-2">Sport - 5 gols sofridos</p>
+    </div>
+    <div class="bg-gradient-to-r from-blue-600 to-indigo-700 shadow-lg rounded-xl p-5">
+      <h2 class="text-xl font-semibold">📅 Próximo Grande Jogo</h2>
+      <p class="text-2xl font-bold mt-2">Bahia vs Vitória (25/03, 18h)</p>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto shadow-xl rounded-xl">
+    <table class="min-w-full bg-gray-800">
+      <thead class="bg-indigo-700 text-gray-100">
         <tr>
-          <th class="px-4 py-2">#</th>
-          <th class="px-4 py-2 text-left">Time</th>
-          <th class="px-4 py-2">PTS</th>
-          <th class="px-4 py-2">J</th>
-          <th class="px-4 py-2">V</th>
-          <th class="px-4 py-2">E</th>
-          <th class="px-4 py-2">D</th>
-          <th class="px-4 py-2">GP</th>
-          <th class="px-4 py-2">GC</th>
-          <th class="px-4 py-2">SG</th>
+          <th class="px-4 py-3">#</th>
+          <th class="px-4 py-3 text-left">Time</th>
+          <th class="px-4 py-3">PTS</th>
+          <th class="px-4 py-3">J</th>
+          <th class="px-4 py-3">V</th>
+          <th class="px-4 py-3">E</th>
+          <th class="px-4 py-3">D</th>
+          <th class="px-4 py-3">GP</th>
+          <th class="px-4 py-3">GC</th>
+          <th class="px-4 py-3">SG</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let time of times" class="text-center border-b hover:bg-gray-100">
-          <td class="px-4 py-2 font-bold">{{ time.pos }}</td>
-          <td class="px-4 py-2 text-left">{{ time.nome }}</td>
-          <td class="px-4 py-2 font-bold">{{ time.pts }}</td>
-          <td class="px-4 py-2">{{ time.jogos }}</td>
-          <td class="px-4 py-2">{{ time.vitorias }}</td>
-          <td class="px-4 py-2">{{ time.empates }}</td>
-          <td class="px-4 py-2">{{ time.derrotas }}</td>
-          <td class="px-4 py-2">{{ time.golsPro }}</td>
-          <td class="px-4 py-2">{{ time.golsContra }}</td>
-          <td class="px-4 py-2">{{ time.saldo }}</td>
+        <tr *ngFor="let time of times" class="text-center border-b border-gray-700 hover:bg-gray-700 transition-colors">
+          <td class="px-4 py-3 font-semibold">{{ time.pos }}</td>
+          <td class="px-4 py-3 text-left font-medium">{{ time.nome }}</td>
+          <td class="px-4 py-3 font-semibold text-indigo-400">{{ time.pts }}</td>
+          <td class="px-4 py-3">{{ time.jogos }}</td>
+          <td class="px-4 py-3">{{ time.vitorias }}</td>
+          <td class="px-4 py-3">{{ time.empates }}</td>
+          <td class="px-4 py-3">{{ time.derrotas }}</td>
+          <td class="px-4 py-3">{{ time.golsPro }}</td>
+          <td class="px-4 py-3">{{ time.golsContra }}</td>
+          <td class="px-4 py-3">{{ time.saldo }}</td>
         </tr>
       </tbody>
     </table>
